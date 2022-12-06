@@ -11,17 +11,12 @@ public class GAgentVisualEditor : Editor {
 
     }
 
-    //Display properties of the GAgent in the Inspector
     public override void OnInspectorGUI() {
-        //Draw the default items in the Inspector as Unity would without
-        //this script
+
         DrawDefaultInspector();
 
-        //syncronise values from the running of the code eith the script properties
         serializedObject.Update();
 
-        //get the agent game object so the GAgent and associated properties can
-        //be displayed
         GAgentVisual agent = (GAgentVisual)target;
         GUILayout.Label("Name: " + agent.name);
         GUILayout.Label("Current Action: " + agent.gameObject.GetComponent<GAgent>().currentAction);
