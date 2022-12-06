@@ -390,6 +390,8 @@ MonoBehaviour:
   preConditions:
   - key: Waiting
     value: 1
+  - key: FreeCubicle
+    value: 1
   afterEffects:
   - key: Treat Patient
     value: 1
@@ -4444,6 +4446,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2704794481392236225, guid: 97bf17167b5286e4a8908f1f2d694014, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5248814542914954163, guid: 97bf17167b5286e4a8908f1f2d694014, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4691,3 +4697,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6663269f9f244211a0009ab8e60c937, type: 3}
+--- !u!1 &7881807148865233720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5253609046397972007, guid: 97bf17167b5286e4a8908f1f2d694014, type: 3}
+  m_PrefabInstance: {fileID: 2704794482895441183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7881807148865233722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881807148865233720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5317187203a40d6479099c60311177b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Get Treated
+  duration: 0
+  preConditions:
+  - key: atHospital
+    value: 0
+  afterEffects:
+  - key: isTreated
+    value: 0
+  agent: {fileID: 0}
+  running: 0

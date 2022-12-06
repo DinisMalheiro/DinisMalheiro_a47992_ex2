@@ -28,7 +28,7 @@ public class GetPatient : GAction {
     public override bool PostPerform() 
     {
 
-        GWorld.Instance.GetWorld.ModifyState("Waiting", -1);
+        GWorld.Instance.GetWorld().ModifyState("Waiting", -1);
             if (target)
                 target.AddComponent<GAgent>().inventory.AddItem(resource);
             return true;
