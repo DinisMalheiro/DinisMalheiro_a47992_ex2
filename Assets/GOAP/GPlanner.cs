@@ -23,7 +23,6 @@ public class Node
         this.parent = parent;
         this.cost = cost;
         this.state = new Dictionary<string, int>(allstates);
-
         foreach (KeyValuePair<string, int> b in beliefstates)
             if (!this.state.ContainsKey(b.Key))
                 this.state.Add(b.Key, b.Value);
